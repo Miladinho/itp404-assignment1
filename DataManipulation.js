@@ -97,10 +97,8 @@ console.log(classifyReviewsByCost(reviews));
 // task #1
 function extractReviews(reviewsData) {
   
-  
-  return reviewsData.prototype.map(function()
+  return reviewsData.data.map(function(review)
   {
-    
     return {
       id : review.id,
       title : review.attributes["review-title"],
@@ -110,7 +108,6 @@ function extractReviews(reviewsData) {
     
   });
   
-
 }
 
 console.log(extractReviews(reviewsData));
