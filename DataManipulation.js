@@ -64,6 +64,36 @@ function findGoodReviews(reviews) {
 console.log(findGoodReviews(reviews));
 
 
+// task #3
+
+function classifyReviewsByCost(reviews) {
+  var high = 0;
+  var average = 0;
+  var low = 0;
+  reviews.forEach(function(rev)
+  {
+    if (rev.cost == "high")
+      {
+        high++;
+      }
+    else if (rev.cost == "average")
+      {
+        average++;
+      }
+    else
+      {
+        low++;
+      }
+  });
+  return {
+    high : high,
+    average : average,
+    'low-average' : low
+  };
+}
+
+console.log(classifyReviewsByCost(reviews));
+
 // task #1
 function extractReviews(reviewsData) {
   
