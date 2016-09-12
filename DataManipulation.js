@@ -101,13 +101,13 @@ function extractReviews(reviewsData) {
   return reviewsData.prototype.map(function()
   {
     
-    var index = {
+    return {
       id : review.id,
       title : review.attributes["review-title"],
-      stars : review.stars,
-      cost : review.cost
-    }
-    return index;
+      stars : review.attributes.stars,
+      cost : review.attributes.cost
+    };
+    
   });
   
 
